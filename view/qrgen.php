@@ -30,7 +30,7 @@
     //html PNG location prefix
     $PNG_WEB_DIR = 'temp/';
 
-    include "qrlib.php";    
+    include "../controller/qrcode/qrlib.php";    
     
     //ofcourse we need rights to create temp dir
     if (!file_exists($PNG_TEMP_DIR))
