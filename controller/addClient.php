@@ -13,7 +13,19 @@
 	$photo=$_POST['photo'];
 	$inclusion=$_POST['inclusion'];
 	$newsletter=$_POST['newsletter'];
-	// set card
+	$card->setprenom($prenom);
+	$card->setnom($nom);
+	$card->setcin($cin);
+	$card->setsexe($sexe)
+	$card->setdate_naissance($date_naissance);
+	$card->setadress($adress);
+	$card->setemail($email);
+	$card->setphoto($photo);
+	$card->setinclusion($inclusion);
+	$card->setnewsletter($newsletter);
+
 	$cardModel->addCard($card);
+
+	header('location:qrgen.php?prenom='.$prenom.'&nom='.$nom.'&cin='.$cin.'&sexe='.$sexe.'&date_naissance='.$date_naissance.'&adress='.$adress.'&email='.$email);
 
 ?>
