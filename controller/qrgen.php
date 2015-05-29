@@ -30,7 +30,7 @@
     //html PNG location prefix
     $PNG_WEB_DIR = 'temp/';
 
-    include "../controller/qrcode/qrlib.php";    
+    include "qrcode/qrlib.php";    
     
     //ofcourse we need rights to create temp dir
     if (!file_exists($PNG_TEMP_DIR))
@@ -38,8 +38,8 @@
     
     
     $filename = $PNG_TEMP_DIR.'test.png';
-    $F_name = $_POST['F_name'];
-    $data = 'prenom:    '.$_POST['name']."\n".'nom:    '.$_POST['lastname']."\n".'age:    '.$_POST['age']."\n".'CIN:    '.$_POST['CIN']."\n".'email:    '.$_POST['email'];
+    $F_name = $_GET['F_name'];
+    $data = 'prenom:    '.$_GET['name']."\n".'nom:    '.$_GET['lastname']."\n".'age:    '.$_GET['age']."\n".'CIN:    '.$_GET['CIN']."\n".'email:    '.$_GET['email'];
     
     //processing form input
     //remember to sanitize user input in real-life solution !!!
@@ -74,7 +74,7 @@
     echo '<img src="'.$PNG_WEB_DIR.basename($filename).'" /><hr/>';  
     
     //config form
-    echo '<form action="index.php" method="post">
+    echo '<form action="index.php" method="POST">
         File Name: <input type="text" name="F_name" />
         <br><br>
         Nom: <input type="text" name="name">
