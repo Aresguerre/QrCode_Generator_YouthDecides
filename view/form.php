@@ -15,13 +15,26 @@
      	<!-- Compiled and minified JavaScript -->
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 		  <script type="text/javascript">
+		  $( document ).ready(function(){
+		  	 $(".button-collapse").sideNav();
+		  	});
 		  $('.datepicker').pickadate({
     		selectMonths: true, // Creates a dropdown to control month
 			selectYears: 15 // Creates a dropdown of 15 years to control year
 			  });
 		  </script>
-		<!-- <nav>
-		</nav> -->
+		<nav>
+		    <div class="nav-wrapper">
+		      <a href="#!" class="brand-logo"><!-- <img src="images/Youth Decides.png"> -->Youth decides</a>
+		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+		      <ul class="right hide-on-med-and-down">
+		        <li><a href="https://youthdecides.org">Youthdecides.org</a></li>
+		      </ul>
+		      <ul class="side-nav" id="mobile-demo">
+		        <li><a href="https://youthdecides.org">Youthdecides.org</a></li>
+		      </ul>
+		    </div>
+		</nav>
 		<div class="container">
 			<div class="row">
 				<div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3">

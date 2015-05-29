@@ -32,6 +32,6 @@ input[type=checkbox]:checked
 .form a{
 	color:#90b70c;
 }
-.form i{
-	color: #90b70c;
+.brand-logo{
+	height: 100%;
 }
