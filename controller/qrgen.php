@@ -22,13 +22,11 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
     
-    echo "<h1>PHP QR Code</h1><hr/>";
-    
     //set it to writable location, a place for temp generated PNG files
-    $PNG_TEMP_DIR = dirname(__FILE__).DIRECTORY_SEPARATOR.'temp'.DIRECTORY_SEPARATOR;
+    $PNG_TEMP_DIR = '../view/images/Resources/QRCode/';
     
     //html PNG location prefix
-    $PNG_WEB_DIR = 'temp/';
+    // $PNG_WEB_DIR = 'temp/';
 
     include "qrcode/qrlib.php";    
     
@@ -38,20 +36,13 @@
     
     
     $filename = $PNG_TEMP_DIR.'test.png';
-    $F_name = $_GET['F_name'];
+    $F_name = $_GET['cin'];
     $data = 'Prenom:'.$_GET['prenom']."\n".'Nom:'.$_GET['nom']."\n".'CIN:'.$_GET['CIN']."\n".'Date de Naissance:'.$_GET['date_naissance']."\n".'Sexe:'.$_GET['sexe']."\n".'E-Mail:'.$_GET['email']."\n".'Adresse:'.$_GET['adresse']."\n";
     
     //processing form input
     //remember to sanitize user input in real-life solution !!!
     $errorCorrectionLevel = 'L';
-    if (isset($_REQUEST['level']) && in_array($_REQUEST['level'], array('L','M','Q','H')))
-        $errorCorrectionLevel = $_REQUEST['level'];    
-
     $matrixPointSize = 4;
-    if (isset($_REQUEST['size']))
-        $matrixPointSize = min(max((int)$_REQUEST['size'], 1), 10);
-
-
     if (isset($data)) { 
     
         //it's very important!
@@ -62,42 +53,36 @@
         $filename = $PNG_TEMP_DIR.$F_name.'.png';
         QRcode::png($data, $filename, $errorCorrectionLevel, $matrixPointSize, 2);    
         
-    } else {    
-    
-        //default data
-        echo 'You can provide data in GET parameter: <a href="?data=like_that">like that</a><hr/>';    
-        QRcode::png('PHP QR Code :)', $filename, $errorCorrectionLevel, $matrixPointSize, 2);    
+    }
         
-    }    
-        
-    //display generated file
-    echo '<img src="'.$PNG_WEB_DIR.basename($filename).'" /><hr/>';  
+    // //display generated file
+    // echo '<img src="'.$PNG_WEB_DIR.basename($filename).'" /><hr/>';  
     
     //config form
-    echo '<form action="index.php" method="POST">
-        File Name: <input type="text" name="F_name" />
-        <br><br>
-        Nom: <input type="text" name="name">
-        <br><br>
-        Prenom: <input type="text" name="lastname">
-        <br><br>
-        age: <input type="text" name="age">
-        <br><br>
-        CIN: <input type="text" name="CIN">
-        <br><br>
-        email: <input type="text" name="email">
-        ECC:&nbsp;<select name="level">
-            <option value="L"'.(($errorCorrectionLevel=='L')?' selected':'').'>L - smallest</option>
-            <option value="M"'.(($errorCorrectionLevel=='M')?' selected':'').'>M</option>
-            <option value="Q"'.(($errorCorrectionLevel=='Q')?' selected':'').'>Q</option>
-            <option value="H"'.(($errorCorrectionLevel=='H')?' selected':'').'>H - best</option>
-        </select>&nbsp;
-        Size:&nbsp;<select name="size">';
+    // echo '<form action="index.php" method="POST">
+    //     File Name: <input type="text" name="F_name" />
+    //     <br><br>
+    //     Nom: <input type="text" name="name">
+    //     <br><br>
+    //     Prenom: <input type="text" name="lastname">
+    //     <br><br>
+    //     age: <input type="text" name="age">
+    //     <br><br>
+    //     CIN: <input type="text" name="CIN">
+    //     <br><br>
+    //     email: <input type="text" name="email">
+    //     ECC:&nbsp;<select name="level">
+    //         <option value="L"'.(($errorCorrectionLevel=='L')?' selected':'').'>L - smallest</option>
+    //         <option value="M"'.(($errorCorrectionLevel=='M')?' selected':'').'>M</option>
+    //         <option value="Q"'.(($errorCorrectionLevel=='Q')?' selected':'').'>Q</option>
+    //         <option value="H"'.(($errorCorrectionLevel=='H')?' selected':'').'>H - best</option>
+    //     </select>&nbsp;
+    //     Size:&nbsp;<select name="size">';
         
-    for($i=1;$i<=10;$i++)
-        echo '<option value="'.$i.'"'.(($matrixPointSize==$i)?' selected':'').'>'.$i.'</option>';
+    // for($i=1;$i<=10;$i++)
+    //     echo '<option value="'.$i.'"'.(($matrixPointSize==$i)?' selected':'').'>'.$i.'</option>';
         
-    echo '</select>&nbsp;
-        <input type="submit" value="GENERATE"></form><hr/>';
+    // echo '</select>&nbsp;
+    //     <input type="submit" value="GENERATE"></form><hr/>';
         header('location:')
     
