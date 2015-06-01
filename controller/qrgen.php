@@ -84,5 +84,6 @@
         
     // echo '</select>&nbsp;
     //     <input type="submit" value="GENERATE"></form><hr/>';
-        // header('location:');
+    header('location:print.php?file_path='.$filename.'&statut='.$_GET['statut'].'&file='.$F_name);
+    ?>
     
