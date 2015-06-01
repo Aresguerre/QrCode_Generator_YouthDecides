@@ -18,7 +18,7 @@ class cardModel {
     public function addcard($card)
     {
         $bdd = new Db();
-        $requete="INSERT INTO card (prenom, nom, cin, sexe, date_naissance, adress, email, photo, inclusion, newsletter) VALUES (".$card->getid_card().",".$card->getprenom().",".$card->getnom().",".$card->getcin().",".$card->getsexe().",".$card->getdate_naissance().",".$card->getadress().",".$card->getemail().",".$card->getphoto().",".$card->getinclusion().",".$card->getnewsletter().")";
+        $requete="INSERT INTO card (prenom, nom, cin, sexe, date_naissance, adress, email, photo, inclusion, newsletter) VALUES (".$card->getid_card().",".$card->getprenom().",".$card->getnom().",".$card->getcin().",".$card->getsexe().",".$card->getdate_naissance().",".$card->getadress().",".$card->getemail().",".$card->getstatut().",".$card->getphoto().",".$card->getinclusion().",".$card->getnewsletter().")";
         $bdd->query($requete);
     }
     
