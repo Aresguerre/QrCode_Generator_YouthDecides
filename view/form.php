@@ -10,7 +10,7 @@
     
     		<link rel="stylesheet" type="text/css" href="style/style.css">
 	</head>
-	<body>
+	<body style="display:block">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      	<!-- Compiled and minified JavaScript -->
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
@@ -20,7 +20,8 @@
 		  	 $('.datepicker').pickadate({
     			selectMonths: true, // Creates a dropdown to control month
 				selectYears: 60,
-				max: new Date(2015,7,14) // Creates a dropdown of 15 years to control year
+				max: new Date(2015,7,14),// Creates a dropdown of 15 years to control year
+				formatSubmit: 'yyyy-mm-dd'
 			  });
 		  	  $('.parallax').parallax();
 		  	});
