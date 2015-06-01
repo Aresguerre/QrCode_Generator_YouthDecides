@@ -124,7 +124,7 @@
 						    	<input class="file-path validate" type="text"/>
 							      <div class="btn">
 							        <span>Photo</span>
-							        <input type="file" name="photo" required/>
+							        <input type="file" name="file" required/>
 							      </div>
 						    </div>
 						</div>

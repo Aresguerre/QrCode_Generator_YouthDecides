@@ -11,8 +11,8 @@
 	$adress=$_POST['adresse'].' '.$_POST['zipcode'].' '.$_POST['ville'];
 	$email=$_POST['email'];
 	$statut=$_POST['statut'];
-	$sourcePath=$_FILES['photo']['tmp_name'];
-	$targetPath="../view/images/Resources/photo/".$_FILES['photo']['name'];
+	$sourcePath=$_FILES['file']['tmp_name'];
+	$targetPath="../view/images/Resources/photo/".$_FILES['file']['name'];
 	move_uploaded_file($sourcePath, $targetPath);
 	$inclusion='';
 	foreach ($_POST['inclusion'] as $selected) {
