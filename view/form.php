@@ -48,15 +48,6 @@
 			</div>
 		</section>
 		<section id="form">
-			<div class="container">
-				<div class="row">
-					<div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3">
-						<form action="addClient.php" method="POST" id="addClient" class="form">
-							<div class="row">
-								<div class="input-field col s12">
-							          <input id="prenom" type="text" class="validate" required>
-							          <label for="prenom">Prenom</label>
-						        </div>
 		<div class="container">
 			<div class="row">
 				<div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3">
@@ -80,21 +71,24 @@
 					        </div>
 						</div>
 						<div class="row">
-							<div class="col s6 m6 l6">
-								<label>Sexe</label>
+								<div class="col s6 m6 l6">
+									<label>Sexe</label>
+								</div>
+								<div class="col s6 m6 l6">
+									<div class="row">
+										<p>
+									      <input name="sexe" type="radio" id="homme" value="homme" checked/>
+									      <label for="homme">Homme</label>
+									    </p>
+									</div>
+									<div class="row">
+										<p>
+									      <input name="sexe" type="radio" id="femme" value="femme" />
+									      <label for="femme">Femme</label>
+									    </p>
+									</div>
+								</div>
 							</div>
-							<div class="row">
-								<div class="input-field col s12">
-							          <input id="nom" type="text" class="validate" required>
-							          <label for="nom">Nom</label>
-						        </div>
-							</div>
-							<div class="row">
-								<div class="input-field col s12">
-							          <input id="cin" type="text" class="validate" required>
-							          <label for="cin">CIN</label>
-						        </div>
-						</div>
 						<div class="row">
 							<label for="date">Date de naissance</label>
 							<input type="date" class="datepicker" id="date" name="date_naissance" required>
@@ -128,62 +122,7 @@
 							      </div>
 						    </div>
 						</div>
-						<div class="row">
-							<div class="col s6 m6 l6">
-								<label>Statut</label>
-							</div>
-							<div class="row">
-								<div class="col s6 m6 l6">
-									<label>Sexe</label>
-								</div>
-								<div class="col s6 m6 l6">
-									<div class="row">
-										<p>
-									      <input name="sexe" type="radio" id="homme" value="homme" checked/>
-									      <label for="homme">Homme</label>
-									    </p>
-									</div>
-									<div class="row">
-										<p>
-									      <input name="sexe" type="radio" id="femme" value="femme" />
-									      <label for="femme">Femme</label>
-									    </p>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<label for="date">Date de naissance</label>
-								<input type="date" class="datepicker" id="date" required>
-							</div>
-							<div class="row">
-								<div class="input-field col s6">
-							          <input id="adresse" type="text" class="validate" required>
-							          <label for="adresse">Adresse</label>
-						        </div>
-						        <div class="input-field col s3">
-							          <input id="zipcode" type="text" class="validate" required>
-							          <label for="zipcode">Code postal</label>
-						        </div>
-						        <div class="input-field col s3">
-							          <input id="ville" type="text" class="validate" required>
-							          <label for="ville">Ville</label>
-						        </div>
-							</div>
-							<div class="row">
-								<div class="input-field col s12">
-							          <input id="email" type="email" class="validate" required>
-							          <label for="email">Email</label>
-						        </div>
-							</div>
-							<div class="row">
-								<div class="file-field input-field">
-							    	<input class="file-path validate" type="text"/>
-								      <div class="btn">
-								        <span>Photo</span>
-								        <input type="file"  required/>
-								      </div>
-							    </div>
-							</div>
+							
 							<div class="row">
 								<div class="col s6 m6 l6">
 									<label>Statut</label>
