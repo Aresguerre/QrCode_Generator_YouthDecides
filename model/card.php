@@ -10,6 +10,7 @@ class card {
 	private $date_naissance;
 	private $adress;
 	private $email;
+    private $statut;
 	private $photo;
 	private $inclusion;
 	private $newsletter;
@@ -61,6 +62,10 @@ class card {
     public function getemail(){
         return $this->email;
     }
+    public function getstatut($statut)
+    {
+        return $this->statut;
+    }
     public function getphoto(){
         return $this->photo;
     }
@@ -102,6 +107,10 @@ class card {
     public function setemail($email)
     {
     	$this->email=$email;
+    }
+    public function setstatut($statut)
+    {
+        $this->statut=$statut;
     }
     public function setphoto($photo)
     {
