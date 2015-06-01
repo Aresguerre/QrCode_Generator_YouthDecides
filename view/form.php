@@ -58,7 +58,7 @@
 				<p class="flow-text">Notre carte a pour but de vous offrir des avantages qui vous faciliteront <br>
 				les taches les plus simples de votre vie quotidienne comme par exemple:  <br>
 				 un accés pas chèr a une salle de cinéma...</p>
-				<a class="waves-effect waves-light btn scroll" href="#" data="form">Join Us</a>
+				<a class="waves-effect waves-light btn scroll" href="#" data="form">Join Us<i class=" large mdi-navigation-expand-more"></i></a>
 			</div>
 			
 		</section>
@@ -109,15 +109,17 @@
 							<input type="date" class="datepicker" id="date" name="date_naissance" required>
 						</div>
 						<div class="row">
-							<div class="input-field col s6">
+							<div class="input-field col s12">
 						          <input id="adresse" type="text" class="validate" name="adresse" required>
 						          <label for="adresse">Adresse</label>
 					        </div>
-					        <div class="input-field col s3">
+					    </div>
+					    <div class="row">
+					        <div class="input-field col s6">
 						          <input id="zipcode" type="text" class="validate" name="zipcode" required>
 						          <label for="zipcode">Code postal</label>
 					        </div>
-					        <div class="input-field col s3">
+					        <div class="input-field col s6">
 						          <input id="ville" type="text" class="validate" name="ville" required>
 						          <label for="ville">Ville</label>
 					        </div>

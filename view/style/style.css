@@ -1,14 +1,11 @@
 .form label{
 	font-size: 1rem;
+	display:inline;
 }
-#form .container
+.file-field input.file-path
 {
-	
+	width:75%;
 }
-/*#form
-{
-	margin-top: 10%;
-}*/
 input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly])
 
 {
@@ -98,7 +95,7 @@ nav{
 	text-align: center;
 	margin-right: 0px;
 	max-width: none;
-	box-sizing:content-box;
+	/*box-sizing:content-box;*/
 }
 .container h1
 {
@@ -116,3 +113,4 @@ nav{
 	background-color: #99C00F;
 	margin-top: 10%;
 }
+
