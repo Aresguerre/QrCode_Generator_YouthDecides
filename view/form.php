@@ -58,20 +58,20 @@
 					<form action="../controller/addClient.php" enctype="multipart/form-data" method="POST" id="addClient" class="form">
 						<div class="row">
 							<div class="input-field col s12">
-						          <input id="prenom" type="text" class="validate" name="prenom" required>
-						          <label for="prenom">Prenom</label>
+						        <input id="prenom" type="text" class="validate" name="prenom" required>
+						        <label for="prenom">Prenom</label>
 					        </div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-						          <input id="nom" type="text" class="validate" name="nom" required>
-						          <label for="nom">Nom</label>
+						        <input id="nom" type="text" class="validate" name="nom" required>
+						        <label for="nom">Nom</label>
 					        </div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-						          <input id="cin" type="text" class="validate" name="cin" required>
-						          <label for="cin">CIN</label>
+						        <input id="cin" type="text" class="validate" name="cin" required>
+						        <label for="cin">CIN</label>
 					        </div>
 						</div>
 						<div class="row">
@@ -191,7 +191,7 @@
 							</div>
 							<div class="row">
 								<p>
-		                            <input type="checkbox" id="newsletter" name="newsletter" value="1"checked/>
+		                            <input type="checkbox" id="newsletter" name="newsletter" value="oui"checked/>
 		                            <label for="newsletter">J'accepte de recevoir d'emails de la part de Youth Decides</label>
 	                            </p>
 							</div>
@@ -201,7 +201,7 @@
 		                            <label for="terms"><a href="#">Terms&Services</a></label>
 	                            </p>
 							</div>
-							<button class="btn waves-effect waves-light" type="submit" name="action" onclick="formsubmit()">Get the Card</button>
+							<input class="btn waves-effect waves-light" type="submit" onclick="formsubmit()" value="Get the Card">
 						</form>
 					</div>
 				</div>

@@ -62,7 +62,7 @@ class card {
     public function getemail(){
         return $this->email;
     }
-    public function getstatut($statut)
+    public function getstatut()
     {
         return $this->statut;
     }
