@@ -94,7 +94,7 @@ class card {
     }
     public function setsexe($sexe)
     {
-    	$this->setsexe=$sexe;
+    	$this->sexe=$sexe;
     }
     public function setdate_naissance($date_naissance)
     {
@@ -114,7 +114,7 @@ class card {
     }
     public function setphoto($photo)
     {
-    	$this->setphoto=$photo;
+    	$this->photo=$photo;
     }
     public function setinclusion($inclusion)
     {
