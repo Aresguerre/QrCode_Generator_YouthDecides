@@ -19,13 +19,16 @@
 		  	 $(".button-collapse").sideNav();
 		  	 $('.datepicker').pickadate({
     			selectMonths: true, // Creates a dropdown to control month
-				selectYears: true // Creates a dropdown of 15 years to control year
+				selectYears: 60,
+				max: new Date(2015,7,14) // Creates a dropdown of 15 years to control year
 			  });
+		  	  $('.parallax').parallax();
 		  	});
 		  
 		  </script>
-		<nav>
-		    <div class="nav-wrapper lime accent-4">
+		  <div class="navbar-fixed">
+			<nav>
+		    <div class="nav-wrapper ">
 		      <a href="#!" class="brand-logo"><img src="images/Youth Decides.png" height="100%"></a>
 		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 		      <ul class="right hide-on-med-and-down">
@@ -35,159 +38,168 @@
 		        <li><a href="http://www.youthdecides.org/">Youthdecides.org</a></li>
 		      </ul>
 		    </div>
+		
 		</nav>
-		<div class="container">
-			<div class="row">
-				<div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3">
-					<form action="addClient.php" method="POST" id="addClient" class="form">
-						<div class="row">
-							<div class="input-field col s12">
-						          <input id="prenom" type="text" class="validate" required>
-						          <label for="prenom">Prenom</label>
-					        </div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-						          <input id="nom" type="text" class="validate" required>
-						          <label for="nom">Nom</label>
-					        </div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-						          <input id="cin" type="text" class="validate" required>
-						          <label for="cin">CIN</label>
-					        </div>
-						</div>
-						<div class="row">
-							<div class="col s6 m6 l6">
-								<label>Sexe</label>
+		</div>
+		<section id="home">
+			<div class="image_holder">
+				<img src="images/background.jpg">
+			</div>
+		</section>
+		<section id="form">
+			<div class="container">
+				<div class="row">
+					<div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3">
+						<form action="addClient.php" method="POST" id="addClient" class="form">
+							<div class="row">
+								<div class="input-field col s12">
+							          <input id="prenom" type="text" class="validate" required>
+							          <label for="prenom">Prenom</label>
+						        </div>
 							</div>
-							<div class="col s6 m6 l6">
-								<div class="row">
-									<p>
-								      <input name="sexe" type="radio" id="homme" value="homme" checked/>
-								      <label for="homme">Homme</label>
-								    </p>
-								</div>
-								<div class="row">
-									<p>
-								      <input name="sexe" type="radio" id="femme" value="femme" />
-								      <label for="femme">Femme</label>
-								    </p>
-								</div>
+							<div class="row">
+								<div class="input-field col s12">
+							          <input id="nom" type="text" class="validate" required>
+							          <label for="nom">Nom</label>
+						        </div>
 							</div>
-						</div>
-						<div class="row">
-							<label for="date">Date de naissance</label>
-							<input type="date" class="datepicker" id="date" required>
-						</div>
-						<div class="row">
-							<div class="input-field col s6">
-						          <input id="adresse" type="text" class="validate" required>
-						          <label for="adresse">Adresse</label>
-					        </div>
-					        <div class="input-field col s3">
-						          <input id="zipcode" type="text" class="validate" required>
-						          <label for="zipcode">Code postal</label>
-					        </div>
-					        <div class="input-field col s3">
-						          <input id="ville" type="text" class="validate" required>
-						          <label for="ville">Ville</label>
-					        </div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-						          <input id="email" type="email" class="validate" required>
-						          <label for="email">Email</label>
-					        </div>
-						</div>
-						<div class="row">
-							<div class="file-field input-field">
-						    	<input class="file-path validate" type="text"/>
-							      <div class="btn">
-							        <span>Photo</span>
-							        <input type="file"  required/>
-							      </div>
-						    </div>
-						</div>
-						<div class="row">
-							<div class="col s6 m6 l6">
-								<label>Statut</label>
+							<div class="row">
+								<div class="input-field col s12">
+							          <input id="cin" type="text" class="validate" required>
+							          <label for="cin">CIN</label>
+						        </div>
 							</div>
-							<div class="col s6 m6 l6">
-								<div class="row">
-									<p>
-								      <input name="statut" type="radio" id="junior" value="junior"  checked/>
-								      <label for="junior">Junior(30dt)</label>
-								    </p>
+							<div class="row">
+								<div class="col s6 m6 l6">
+									<label>Sexe</label>
 								</div>
-								<div class="row">
-									<p>
-								      <input name="statut" type="radio" id="senior" value="senior" />
-								      <label for="senior">Senior(100dt)</label>
-								    </p>
-								</div>
-								<div class="row">
-									<p>
-								      <input name="statut" type="radio" id="sponsor" value="sponsor" />
-								      <label for="sponsor">Sponsor(500Dt)</label>
-								    </p>
+								<div class="col s6 m6 l6">
+									<div class="row">
+										<p>
+									      <input name="sexe" type="radio" id="homme" value="homme" checked/>
+									      <label for="homme">Homme</label>
+									    </p>
+									</div>
+									<div class="row">
+										<p>
+									      <input name="sexe" type="radio" id="femme" value="femme" />
+									      <label for="femme">Femme</label>
+									    </p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col s6 m6 l6">
-								<label>Inclusion</label>
+							<div class="row">
+								<label for="date">Date de naissance</label>
+								<input type="date" class="datepicker" id="date" required>
 							</div>
-							<div class="col s6 m6 l6">
-								<div class="row">
-									<p>
-                                    	<input type="checkbox" id="politique" name="inclusion[]" value="politique"/>
-                                        <label for="politique">Inclusion Politique</label>
-                                    </p>
+							<div class="row">
+								<div class="input-field col s6">
+							          <input id="adresse" type="text" class="validate" required>
+							          <label for="adresse">Adresse</label>
+						        </div>
+						        <div class="input-field col s3">
+							          <input id="zipcode" type="text" class="validate" required>
+							          <label for="zipcode">Code postal</label>
+						        </div>
+						        <div class="input-field col s3">
+							          <input id="ville" type="text" class="validate" required>
+							          <label for="ville">Ville</label>
+						        </div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+							          <input id="email" type="email" class="validate" required>
+							          <label for="email">Email</label>
+						        </div>
+							</div>
+							<div class="row">
+								<div class="file-field input-field">
+							    	<input class="file-path validate" type="text"/>
+								      <div class="btn">
+								        <span>Photo</span>
+								        <input type="file"  required/>
+								      </div>
+							    </div>
+							</div>
+							<div class="row">
+								<div class="col s6 m6 l6">
+									<label>Statut</label>
 								</div>
-								<div class="row">
-									<p>
-                                    	<input type="checkbox" id="economique" name="inclusion[]" value="economique"/>
-                                        <label for="economique">Inclusion Economique</label>
-                                    </p>
-								</div>
-								<div class="row">
-									<p>
-                                    	<input type="checkbox" id="sociale" name="inclusion[]" value="social"/>
-                                        <label for="sociale">Inclusion Sociale</label>
-                                    </p>
-								</div>
-								<div class="row">
-									<p>
-                                    	<input type="checkbox" id="culturelle" name="inclusion[]" value="culturelle"/>
-                                        <label for="culturelle">Inclusion Culturelle</label>
-                                    </p>
-								</div>
-								<div class="row">
-									<p>
-                                    	<input type="checkbox" id="technologique" name="inclusion[]" value="technologique"/>
-                                        <label for="technologique">Inclusion Technologique</label>
-                                    </p>
+								<div class="col s6 m6 l6">
+									<div class="row">
+										<p>
+									      <input name="statut" type="radio" id="junior" value="junior"  checked/>
+									      <label for="junior">Junior(30dt)</label>
+									    </p>
+									</div>
+									<div class="row">
+										<p>
+									      <input name="statut" type="radio" id="senior" value="senior" />
+									      <label for="senior">Senior(100dt)</label>
+									    </p>
+									</div>
+									<div class="row">
+										<p>
+									      <input name="statut" type="radio" id="sponsor" value="sponsor" />
+									      <label for="sponsor">Sponsor(500Dt)</label>
+									    </p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="row">
-							<p>
-	                            <input type="checkbox" id="newsletter"  checked/>
-	                            <label for="newsletter">J'accepte de recevoir d'emails de la part de Youth Decides</label>
-                            </p>
-						</div>
-						<div class="row">
-							<p>
-	                            <input type="checkbox" id="terms" required/>
-	                            <label for="terms"><a href="#">Terms&Services</a></label>
-                            </p>
-						</div>
-						<button class="btn waves-effect waves-light" type="submit" name="action" onclick="formsubmit()">Get the Card</button>
-					</form>
+							<div class="row">
+								<div class="col s6 m6 l6">
+									<label>Inclusion</label>
+								</div>
+								<div class="col s6 m6 l6">
+									<div class="row">
+										<p>
+	                                    	<input type="checkbox" id="politique" name="inclusion[]" value="politique"/>
+	                                        <label for="politique">Inclusion Politique</label>
+	                                    </p>
+									</div>
+									<div class="row">
+										<p>
+	                                    	<input type="checkbox" id="economique" name="inclusion[]" value="economique"/>
+	                                        <label for="economique">Inclusion Economique</label>
+	                                    </p>
+									</div>
+									<div class="row">
+										<p>
+	                                    	<input type="checkbox" id="sociale" name="inclusion[]" value="social"/>
+	                                        <label for="sociale">Inclusion Sociale</label>
+	                                    </p>
+									</div>
+									<div class="row">
+										<p>
+	                                    	<input type="checkbox" id="culturelle" name="inclusion[]" value="culturelle"/>
+	                                        <label for="culturelle">Inclusion Culturelle</label>
+	                                    </p>
+									</div>
+									<div class="row">
+										<p>
+	                                    	<input type="checkbox" id="technologique" name="inclusion[]" value="technologique"/>
+	                                        <label for="technologique">Inclusion Technologique</label>
+	                                    </p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<p>
+		                            <input type="checkbox" id="newsletter"  checked/>
+		                            <label for="newsletter">J'accepte de recevoir d'emails de la part de Youth Decides</label>
+	                            </p>
+							</div>
+							<div class="row">
+								<p>
+		                            <input type="checkbox" id="terms" required/>
+		                            <label for="terms"><a href="#">Terms&Services</a></label>
+	                            </p>
+							</div>
+							<button class="btn waves-effect waves-light" type="submit" name="action" onclick="formsubmit()">Get the Card</button>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</body>
 </html>
