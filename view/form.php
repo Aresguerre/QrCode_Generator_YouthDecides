@@ -39,22 +39,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3">
-					<form action="addClient.php" method="POST" id="addClient" class="form">
+					<form action="../controller/addClient.php" method="POST" id="addClient" class="form">
 						<div class="row">
 							<div class="input-field col s12">
-						          <input id="prenom" type="text" class="validate" required>
+						          <input id="prenom" type="text" class="validate" name="prenom" required>
 						          <label for="prenom">Prenom</label>
 					        </div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-						          <input id="nom" type="text" class="validate" required>
+						          <input id="nom" type="text" class="validate" name="nom" required>
 						          <label for="nom">Nom</label>
 					        </div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-						          <input id="cin" type="text" class="validate" required>
+						          <input id="cin" type="text" class="validate" name="cin" required>
 						          <label for="cin">CIN</label>
 					        </div>
 						</div>
@@ -79,25 +79,25 @@
 						</div>
 						<div class="row">
 							<label for="date">Date de naissance</label>
-							<input type="date" class="datepicker" id="date" required>
+							<input type="date" class="datepicker" id="date" name="date_naissance" required>
 						</div>
 						<div class="row">
 							<div class="input-field col s6">
-						          <input id="adresse" type="text" class="validate" required>
+						          <input id="adresse" type="text" class="validate" name="adresse" required>
 						          <label for="adresse">Adresse</label>
 					        </div>
 					        <div class="input-field col s3">
-						          <input id="zipcode" type="text" class="validate" required>
+						          <input id="zipcode" type="text" class="validate" name="zipcode" required>
 						          <label for="zipcode">Code postal</label>
 					        </div>
 					        <div class="input-field col s3">
-						          <input id="ville" type="text" class="validate" required>
+						          <input id="ville" type="text" class="validate" name="ville" required>
 						          <label for="ville">Ville</label>
 					        </div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-						          <input id="email" type="email" class="validate" required>
+						          <input id="email" type="email" class="validate" name="email" required>
 						          <label for="email">Email</label>
 					        </div>
 						</div>
@@ -106,7 +106,7 @@
 						    	<input class="file-path validate" type="text"/>
 							      <div class="btn">
 							        <span>Photo</span>
-							        <input type="file"  required/>
+							        <input type="file" name="photo" required/>
 							      </div>
 						    </div>
 						</div>

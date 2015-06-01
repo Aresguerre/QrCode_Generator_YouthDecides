@@ -22,7 +22,7 @@
 	$card->setprenom($prenom);
 	$card->setnom($nom);
 	$card->setcin($cin);
-	$card->setsexe($sexe)
+	$card->setsexe($sexe);
 	$card->setdate_naissance($date_naissance);
 	$card->setadress($adress);
 	$card->setemail($email);
