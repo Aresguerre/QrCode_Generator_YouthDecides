@@ -17,21 +17,22 @@
 		  <script type="text/javascript">
 		  $( document ).ready(function(){
 		  	 $(".button-collapse").sideNav();
-		  	});
-		  $('.datepicker').pickadate({
-    		selectMonths: true, // Creates a dropdown to control month
-			selectYears: 15 // Creates a dropdown of 15 years to control year
+		  	 $('.datepicker').pickadate({
+    			selectMonths: true, // Creates a dropdown to control month
+				selectYears: true // Creates a dropdown of 15 years to control year
 			  });
+		  	});
+		  
 		  </script>
 		<nav>
-		    <div class="nav-wrapper">
-		      <a href="#!" class="brand-logo"><!-- <img src="images/Youth Decides.png"> -->Youth decides</a>
+		    <div class="nav-wrapper lime accent-4">
+		      <a href="#!" class="brand-logo"><img src="images/Youth Decides.png" height="100%"></a>
 		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 		      <ul class="right hide-on-med-and-down">
-		        <li><a href="https://youthdecides.org">Youthdecides.org</a></li>
+		        <li><a href="http://www.youthdecides.org/">Youthdecides.org</a></li>
 		      </ul>
 		      <ul class="side-nav" id="mobile-demo">
-		        <li><a href="https://youthdecides.org">Youthdecides.org</a></li>
+		        <li><a href="http://www.youthdecides.org/">Youthdecides.org</a></li>
 		      </ul>
 		    </div>
 		</nav>
