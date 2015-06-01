@@ -26,6 +26,8 @@
 		  	});
 		  
 		  </script>
+		  <script type="text/javascript" src="js/script.js"></script>
+		 
 		  <div class="navbar-fixed">
 			<nav>
 		    <div class="nav-wrapper ">
