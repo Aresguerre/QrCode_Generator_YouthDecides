@@ -21,9 +21,17 @@
     			selectMonths: true, // Creates a dropdown to control month
 				selectYears: 60,
 				max: new Date(2015,01,01),// Creates a dropdown of 15 years to control year
-				formatSubmit: 'yyyy-mm-dd'
+				formatSubmit: 'yyyy-mm-dd',
+  				hiddenName: false
 			  });
 		  	  $('.parallax').parallax();
+
+		  	  $('.scroll').click(function(){
+		  	  	var scrollAncre = $(this).attr('data');
+		  	  	var navHeight = $('nav').outerHeight();
+		  	  	var scrollTo = $('section[id="'+scrollAncre+'"]').offset().top-navHeight ;
+		  	  	$('body ,html').animate( {scrollTop: scrollTo} , 500) ;
+		  	  });
 		  	});
 		  
 		  </script>
@@ -46,10 +54,14 @@
 
 		</div>
 		<section id="home">
-			<div class="content">
+			<div class="container">
 				<h1>Youth Decides</h1>
-				<h1>dddddddddd</h1>
+				<p class="flow-text">Notre carte a pour but de vous offrir des avantages qui vous faciliteront <br>
+				les taches les plus simples de votre vie quotidienne comme par exemple:  <br>
+				 un accés pas chèr a une salle de cinéma...</p>
+				<a class="waves-effect waves-light btn scroll" href="#" data="form">Join Us</a>
 			</div>
+			
 		</section>
 		<section id="form">
 		<div class="container">
@@ -120,7 +132,7 @@
 						<div class="row">
 							<div class="file-field input-field">
 						    	<input class="file-path validate" type="text"/>
-							      <div class="btn">
+							      <div class="btn tooltipped" data-position="left" data-tooltip="Max:1Mo">
 							        <span>Photo</span>
 							        <input type="file" name="file"  id="file-select"required/>
 							      </div>
