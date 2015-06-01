@@ -213,7 +213,10 @@
 		                            <label for="terms"><a href="#">Terms&Services</a></label>
 	                            </p>
 							</div>
-							<input class="btn waves-effect waves-light" type="submit" onclick="formsubmit()" value="Get the Card">
+
+								<button class="btn waves-effect waves-light" type="submit" name="action">Get the Card
+   
+  								</button>
 						</form>
 					</div>
 				</div>
