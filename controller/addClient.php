@@ -15,10 +15,13 @@
 	$targetPath="../view/images/Resources/photo/".$_FILES['file']['name'];
 	move_uploaded_file($sourcePath, $targetPath);
 	$inclusion='';
+	$newsletter=0;
 	foreach ($_POST['inclusion'] as $selected) {
 		$inclusion.=$selected;
 	}
-	$newsletter=$_POST['newsletter'];
+	if (isset($_POST['newsletter'])) {
+		$newsletter=$_POST['newsletter'];
+	}
 	$card->setprenom($prenom);
 	$card->setnom($nom);
 	$card->setcin($cin);

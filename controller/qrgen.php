@@ -37,7 +37,7 @@
     
     $filename = $PNG_TEMP_DIR.'test.png';
     $F_name = $_GET['cin'];
-    $data = 'Prenom:'.$_GET['prenom']."\n".'Nom:'.$_GET['nom']."\n".'CIN:'.$_GET['CIN']."\n".'Date de Naissance:'.$_GET['date_naissance']."\n".'Sexe:'.$_GET['sexe']."\n".'E-Mail:'.$_GET['email']."\n".'Adresse:'.$_GET['adresse']."\n".'Type de Carte:'.$_GET['statut']."\n";
+    $data = 'Prenom:'.$_GET['prenom']."\n".'Nom:'.$_GET['nom']."\n".'CIN:'.$_GET['cin']."\n".'Date de Naissance:'.$_GET['date_naissance']."\n".'Sexe:'.$_GET['sexe']."\n".'E-Mail:'.$_GET['email']."\n".'Adresse:'.$_GET['adresse']."\n".'Type de Carte:'.$_GET['statut']."\n";
     
     //processing form input
     //remember to sanitize user input in real-life solution !!!
@@ -84,5 +84,5 @@
         
     // echo '</select>&nbsp;
     //     <input type="submit" value="GENERATE"></form><hr/>';
-        header('location:')
+        // header('location:');
     

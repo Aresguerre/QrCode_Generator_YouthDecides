@@ -54,7 +54,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col s6 m6 l6 offset-s3 offset-m3 offset-l3">
-					<form action="../controller/addClient.php" method="POST" id="addClient" class="form">
+					<form action="../controller/addClient.php" enctype="multipart/form-data" method="POST" id="addClient" class="form">
 						<div class="row">
 							<div class="input-field col s12">
 						          <input id="prenom" type="text" class="validate" name="prenom" required>
@@ -190,7 +190,7 @@
 							</div>
 							<div class="row">
 								<p>
-		                            <input type="checkbox" id="newsletter"  checked/>
+		                            <input type="checkbox" id="newsletter" name="newsletter" value="1"checked/>
 		                            <label for="newsletter">J'accepte de recevoir d'emails de la part de Youth Decides</label>
 	                            </p>
 							</div>
