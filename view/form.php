@@ -11,7 +11,7 @@
     		<link rel="stylesheet" type="text/css" href="style/style.css">
 	</head>
 	<body style="display:block">
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
      	<!-- Compiled and minified JavaScript -->
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 		  <script type="text/javascript">
@@ -20,7 +20,7 @@
 		  	 $('.datepicker').pickadate({
     			selectMonths: true, // Creates a dropdown to control month
 				selectYears: 60,
-				max: new Date(2015,7,14),// Creates a dropdown of 15 years to control year
+				max: new Date(2015,01,01),// Creates a dropdown of 15 years to control year
 				formatSubmit: 'yyyy-mm-dd'
 			  });
 		  	  $('.parallax').parallax();
@@ -46,8 +46,9 @@
 
 		</div>
 		<section id="home">
-			<div class="image_holder">
-				<img src="images/background.jpg">
+			<div class="content">
+				<h1>Youth Decides</h1>
+				<h1>dddddddddd</h1>
 			</div>
 		</section>
 		<section id="form">
@@ -121,7 +122,7 @@
 						    	<input class="file-path validate" type="text"/>
 							      <div class="btn">
 							        <span>Photo</span>
-							        <input type="file" name="file" required/>
+							        <input type="file" name="file"  id="file-select"required/>
 							      </div>
 						    </div>
 						</div>
