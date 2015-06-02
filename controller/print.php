@@ -2,6 +2,7 @@
 	if (isset($_GET['file'])) {
 		require_once('pdf/fpdf.php');
 		require_once('pdf/fpdi.php');
+		require_once '../model/cardModel.php';
 
 		$name=$_GET['file'];
 		$pdf = new FPDI();
@@ -26,8 +27,11 @@
 		//Use this page as template
 		// use the imported page and place it at point 20,30 with a width of 170 mm
 		$pdf->Image($_GET['file_path'],5,40,10,10,'png');
-		$pdf->Output('userCard/'.$name.'.pdf', "F");
+		$path='userCard/'.$name.'.pdf';
+		$pdf->Output($path, "F");
 		header('location:../view/form.php');
+		$cardModel= new cardModel();
+		$cardModel->activateCard($path,$name);
 	} 
 	else
 	{

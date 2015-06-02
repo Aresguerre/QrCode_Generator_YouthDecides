@@ -146,19 +146,19 @@
 									<div class="row">
 										<p>
 									      <input name="statut" type="radio" id="junior" value="junior"  checked/>
-									      <label for="junior">Junior(30dt)</label>
+									      <label for="junior">Junior(à partir de 30dt)</label>
 									    </p>
 									</div>
 									<div class="row">
 										<p>
 									      <input name="statut" type="radio" id="senior" value="senior" />
-									      <label for="senior">Senior(100dt)</label>
+									      <label for="senior">Senior(à partir de 100dt)</label>
 									    </p>
 									</div>
 									<div class="row">
 										<p>
 									      <input name="statut" type="radio" id="sponsor" value="sponsor" />
-									      <label for="sponsor">Sponsor(500Dt)</label>
+									      <label for="sponsor">Sponsor(à partir de 500Dt)</label>
 									    </p>
 									</div>
 								</div>
