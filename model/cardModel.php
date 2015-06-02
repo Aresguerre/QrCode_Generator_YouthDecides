@@ -28,6 +28,28 @@ class cardModel {
         $bdd = new Db();
         $query = "UPDATE card SET card='".$path."' WHERE cin = '".$cin."'";
         $result=$bdd->query($query);
+    }
+
+    public function setEtatOne($cin)
+    {
+        $bdd = new Db();
+        $query = "UPDATE card SET etat=1 WHERE cin = '".$cin."'";
+        $bdd->query($query);         
+    }
+
+    public function Afficher()
+    {
+        $bdd = new Db();
+        $query = "SELECT * FROM card WHERE etat = 0";
+        $result = $bdd->query($query);
+            $i = 0 ;
+            while ($data = $result -> fetch_assoc()) {
+                $C = new card($data);
+                $tableau[$i] = $C;
+                $i++;
+                echo $C->getprenom();
+            }
+            return $tableau;
     }    
     
 }
