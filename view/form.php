@@ -33,15 +33,9 @@
 
 		  	  $("#up").hide();
 		  	  var options = [
-			    {selector: '#page-footer', offset: 0, callback: '$("#up").show()' },
-			    
+			    {selector: '#page-footer', offset: 0, callback: '$("#up").show("slow")' },
 			  ];
 			  Materialize.scrollFire(options);
-			  $("#up").hide();
-			      
-		  	  
-
-    			
 		  	});
 		  
 		  </script>
