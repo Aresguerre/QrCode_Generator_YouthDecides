@@ -113,4 +113,34 @@ nav{
 	background-color: #99C00F;
 	margin-top: 10%;
 }
+footer.page-footer
+{
+	background-color:  rgba(37, 37, 37, 0.952941);
+}
+footer ul li
+{
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	padding-bottom: 5%;
+	margin-bottom: 5%;
+}
+.ion-social-facebook
+{
+font-size: 48px;
+}
+.ion-social-googleplus
+{
+	font-size: 48px;
+}
 
+.ion-social-youtube
+{
+	font-size: 48px;
+}
+.btn-floating
+{
+	background-color:  #99C00F;
+}
+.btn-floating:hover
+{
+	background-color:  #99C00F;
+}

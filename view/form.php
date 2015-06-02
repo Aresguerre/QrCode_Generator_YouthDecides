@@ -8,6 +8,7 @@
       		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     
     		<link rel="stylesheet" type="text/css" href="style/style.css">
+    		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	</head>
 	<body style="display:block">
 		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
@@ -31,6 +32,18 @@
 		  	  	var scrollTo = $('section[id="'+scrollAncre+'"]').offset().top-navHeight ;
 		  	  	$('body ,html').animate( {scrollTop: scrollTo} , 500) ;
 		  	  });
+
+		  	  
+		  	  var topOfOthDiv = $(".page-footer").offset().top-$('.page-footer').outerHeight();
+		  	  
+		  	  console.log(topOfOthDiv);
+    			$(window).scroll(function() {
+    				$("#up").hide();
+    				console.log($(window).scrollTop());
+        			if($(window).scrollTop() > 1600) { //scrolled past the other div?
+            			$("#up").show(); //reached the desired point -- show div
+        				}
+    			});
 		  	});
 		  
 		  </script>
@@ -207,5 +220,6 @@
 				</div>
 			</div>
 		</section>
+		<?php include_once'footer.php' ?>
 	</body>
 </html>
