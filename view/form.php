@@ -24,8 +24,6 @@
 				formatSubmit: 'yyyy-mm-dd',
   				hiddenName: false
 			  });
-		  	  $('.parallax').parallax();
-
 		  	  $('.scroll').click(function(){
 		  	  	var scrollAncre = $(this).attr('data');
 		  	  	var navHeight = $('nav').outerHeight();
@@ -33,17 +31,17 @@
 		  	  	$('body ,html').animate( {scrollTop: scrollTo} , 500) ;
 		  	  });
 
+		  	  $("#up").hide();
+		  	  var options = [
+			    {selector: '#page-footer', offset: 0, callback: '$("#up").show()' },
+			    
+			  ];
+			  Materialize.scrollFire(options);
+			  $("#up").hide();
+			      
 		  	  
-		  	  var topOfOthDiv = $(".page-footer").offset().top-$('.page-footer').outerHeight();
-		  	  
-		  	  console.log(topOfOthDiv);
-    			$(window).scroll(function() {
-    				$("#up").hide();
-    				console.log($(window).scrollTop());
-        			if($(window).scrollTop() > 1600) { //scrolled past the other div?
-            			$("#up").show(); //reached the desired point -- show div
-        				}
-    			});
+
+    			
 		  	});
 		  
 		  </script>
