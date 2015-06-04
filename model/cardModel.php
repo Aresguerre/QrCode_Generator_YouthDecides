@@ -37,19 +37,20 @@ class cardModel {
         $bdd->query($query);         
     }
 
-    public function Afficher()
+    public function Afficher($etat)
     {
         $bdd = new Db();
-        $query = "SELECT * FROM card WHERE etat = 0";
+        $tableau = array();
+        $query = "SELECT * FROM card";
         $result = $bdd->query($query);
-            $i = 0 ;
-            while ($data = $result -> fetch_assoc()) {
-                $C = new card($data);
-                $tableau[$i] = $C;
-                $i++;
-                echo $C->getprenom();
-            }
-            return $tableau;
+        echo $query.json_encode($result);
+        $i=0;
+        while ($data = $result->fetch_assoc()) {
+            $C = new card($data);
+            $tableau[$i]=$C;
+            $i++;
+        }
+        return $tableau;
     }    
     
 }

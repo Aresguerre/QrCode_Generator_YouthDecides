@@ -1,13 +1,8 @@
 <?php
-	if (isset($_SESSION['log'])) {
-		header('location:signin.php');
-	}
-	else
-	{
 		require_once '../model/cardModel.php';
 		$cardModel= new cardModel();
-		$listeU = $cardModel->Afficher();
-		echo json_encode($listeU);
+		$listeU=0;
+		$listeU = $cardModel->Afficher(0);
 ?>
 <html>
 <head>
@@ -33,6 +28,9 @@
 
 </head>
 <body>
+	<?php
+	echo json_encode($listeU);
+	?>
 	<table>
 	<thead>
 		<tr>
@@ -41,6 +39,7 @@
 			<th>Prénom</th>
 			<th>Nom</th>
 			<th>Type</th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -50,6 +49,7 @@
 ?>
 	    <tr>
 	        <td><?php echo $card->getid_card() ;?></td>
+	        <td><?php echo $card->getcin() ; ?></td>
 	        <td><?php echo $card->getprenom() ;?></td>
 	        <td><?php echo $card->getnom() ;?></td>
 	        <td><?php echo $card->getstatut() ;?></td>
@@ -58,7 +58,6 @@
 
 <?php
     endforeach;
-}
 ?>
      
 	</tbody>

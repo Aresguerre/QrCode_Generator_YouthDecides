@@ -13,7 +13,9 @@ class card {
     private $statut;
 	private $photo;
 	private $inclusion;
+    private $card;
 	private $newsletter;
+    private $etat;
 	
 	public function hydrate(array $data)
 	{
@@ -72,10 +74,17 @@ class card {
     public function getinclusion(){
     	return $this->inclusion;
     }
+    public function getcard()
+    {
+        return $this->card;
+    }
     public function getnewsletter(){
     	return $this->newsletter;
     }
-
+    public function getetat()
+    {
+        return $this->etat;
+    }
     
 
     /*setters*/
@@ -120,9 +129,17 @@ class card {
     {
     	$this->inclusion=$inclusion;
     }
+    public function setcard($card)
+    {
+        $this->card=$card;
+    }
     public function setnewsletter($newsletter)
     {
     	$this->newsletter=$newsletter;
+    }
+    public function setetat($etat)
+    {
+        $this->etat=$etat;
     }
     
 }
