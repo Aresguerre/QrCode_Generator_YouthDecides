@@ -32,10 +32,19 @@
 		  	  });
 
 		  	  $("#up").hide();
-		  	  var options = [
-			    {selector: '#page-footer', offset: 0, callback: '$("#up").show("slow")' },
-			  ];
-			  Materialize.scrollFire(options);
+		  	   var topOfOthDiv = $(".page-footer").offset().top-$('.page-footer').outerHeight();
+		  	  
+		  	  
+    			$(window).scroll(function() {
+    				
+    				
+        			if($(window).scrollTop() > 1600) { //scrolled past the other div?
+            			$("#up").show("slow"); //reached the desired point -- show div
+        				}
+        			else {
+        				$("#up").hide("slow");
+        			}
+    			});
 		  	});
 		  
 		  </script>
