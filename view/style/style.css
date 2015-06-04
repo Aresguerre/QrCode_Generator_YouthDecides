@@ -144,3 +144,7 @@ font-size: 48px;
 {
 	background-color:  #99C00F;
 }
+
+#admin .container{
+	margin-top: 13%;
+}
