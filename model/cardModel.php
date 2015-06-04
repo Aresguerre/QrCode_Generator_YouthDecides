@@ -26,7 +26,7 @@ class cardModel {
     public function activateCard($path, $cin)
     {
         $bdd = new Db();
-        $query = "UPDATE card SET card='".$path."' WHERE cin = '".$cin."'";
+        $query = "UPDATE card SET c_image='".$path."' WHERE cin = '".$cin."'";
         $result=$bdd->query($query);
     }
 
@@ -43,7 +43,6 @@ class cardModel {
         $tableau = array();
         $query = "SELECT * FROM card";
         $result = $bdd->query($query);
-        echo $query.json_encode($result);
         $i=0;
         while ($data = $result->fetch_assoc()) {
             $C = new card($data);
@@ -54,3 +53,4 @@ class cardModel {
     }    
     
 }
+    

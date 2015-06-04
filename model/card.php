@@ -13,7 +13,7 @@ class card {
     private $statut;
 	private $photo;
 	private $inclusion;
-    private $card;
+    private $c_image;
 	private $newsletter;
     private $etat;
 	
@@ -35,7 +35,7 @@ class card {
 	
 		}
 		else{
-			$this->hydrate([0]);
+			$this->hydrate($args[0]);
 		}
 	}
 
@@ -74,9 +74,9 @@ class card {
     public function getinclusion(){
     	return $this->inclusion;
     }
-    public function getcard()
+    public function getc_image()
     {
-        return $this->card;
+        return $this->c_image;
     }
     public function getnewsletter(){
     	return $this->newsletter;
@@ -129,9 +129,9 @@ class card {
     {
     	$this->inclusion=$inclusion;
     }
-    public function setcard($card)
+    public function setc_image($c_image)
     {
-        $this->card=$card;
+        $this->c_image=$c_image;
     }
     public function setnewsletter($newsletter)
     {
