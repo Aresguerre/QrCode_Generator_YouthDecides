@@ -41,7 +41,7 @@ class cardModel {
     {
         $bdd = new Db();
         $tableau = array();
-        $query = "SELECT * FROM card";
+        $query = "SELECT * FROM card WHERE etat=".$etat;
         $result = $bdd->query($query);
         $i=0;
         while ($data = $result->fetch_assoc()) {

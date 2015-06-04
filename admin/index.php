@@ -28,9 +28,6 @@
 
 </head>
 <body>
-	<?php
-	echo json_encode($listeU);
-	?>
 	<table>
 	<thead>
 		<tr>
@@ -53,7 +50,7 @@
 	        <td><?php echo $card->getprenom() ;?></td>
 	        <td><?php echo $card->getnom() ;?></td>
 	        <td><?php echo $card->getstatut() ;?></td>
-	        <td><?php echo'<a class="waves-effect waves-teal btn" onclick="#">View</a>';?></td>
+	        <td><?php echo'<a class="waves-effect waves-teal btn" target="_blank" href="../controller/check.php?cin='.$card->getcin().'&carte='.$card->getc_image().'">Accept</a>';?></td>
 	    </tr>
 
 <?php
