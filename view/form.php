@@ -38,7 +38,7 @@
     			$(window).scroll(function() {
     				
     				
-        			if($(window).scrollTop() > 1600) { //scrolled past the other div?
+        			if($(window).scrollTop() > 1800) { //scrolled past the other div?
             			$("#up").show("slow"); //reached the desired point -- show div
         				}
         			else {
@@ -213,9 +213,11 @@
 		                            <label for="terms"><a href="#">Terms&Services</a></label>
 	                            </p>
 							</div>
-
-
-								<button class="btn waves-effect waves-light" type="submit" name="action">Get the Card</button>
+							<div class="row">
+								<div class="col s12 m6 l6">
+									<button class="btn waves-effect waves-light" type="submit" name="action">Get the Card</button>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
