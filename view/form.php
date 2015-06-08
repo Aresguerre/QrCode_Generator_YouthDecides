@@ -140,10 +140,10 @@
 						</div>
 							
 							<div class="row">
-								<div class="col s6 m6 l6">
+								<div class="col s4 m6 l6">
 									<label>Statut</label>
 								</div>
-								<div class="col s6 m6 l6">
+								<div class="col s8 m6 l6">
 									<div class="row">
 										<p>
 									      <input name="statut" type="radio" id="junior" value="junior"  checked/>
